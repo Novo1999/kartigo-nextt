@@ -41,9 +41,9 @@ export default async function RootLayout({
           <WishlistProvider>
             <Header lang={lang} />
             <Navbar lang={lang} />
-            {/* {children} */}
-            {/* <Footer lang={lang} /> */}
-            {/* <Copyright lang={lang} /> */}
+            {children}
+            <Footer lang={lang} />
+            <Copyright lang={lang} />
           </WishlistProvider>
         </CartProvider>
         <Toaster />

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
+import { CgSearch } from 'react-icons/cg'
 
 const SpotlightButton = ({
   disabled,
@@ -47,8 +48,11 @@ const SpotlightButton = ({
         ref={btnRef}
         className='relative w-36 h-10 overflow-hidden rounded-lg flex justify-center bg-gradient-to-r from-slate-900 to-slate-700 px-4 py-3 text-lg font-medium text-white'
       >
-        <span className='pointer-events-none relative z-10 m-auto text-sm mix-blend-difference'>
+        <span className='pointer-events-none relative z-10 m-auto text-sm mix-blend-difference hidden sm:block'>
           {searchLocale}
+        </span>
+        <span className='block sm:hidden pointer-events-none relative z-10 mr-16 text-sm mix-blend-difference'>
+          <CgSearch />
         </span>
         <span
           ref={spanRef}

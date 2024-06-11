@@ -29,7 +29,7 @@ const BannerText = ({
     >
       {bannerTextCharacters.map((char, index) => (
         <motion.span
-          className='text-5xl mb-4 capitalize leading-normal bg-gradient-to-r from-amber-200 to-yellow-500 font-bold drop-shadow-lg text-transparent bg-clip-text'
+          className='text-xl min-[375px]:text-2xl lg:text-5xl mb-4 capitalize leading-normal bg-gradient-to-r from-amber-200 to-yellow-500 font-bold drop-shadow-lg text-transparent bg-clip-text'
           variants={charVariants}
           key={index}
           transition={{ duration: 0.5 }}

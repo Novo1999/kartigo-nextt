@@ -14,7 +14,7 @@ const Banner = async ({ lang }: ILang) => {
       <div className='absolute bg-black bg-opacity-40 inset-0 flex flex-col justify-center items-center'>
         <div className='container text-center '>
           <BannerText lang={lang} mainText={mainText} />
-          <p className='text-white animate-fadeUp'>
+          <p className='text-white animate-fadeUp hidden sm:block'>
             {subText.slice(0, Math.floor(subText.length / 2))}
             <br />
             {subText.slice(Math.floor(subText.length / 2), subText.length)}
