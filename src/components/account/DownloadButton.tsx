@@ -16,7 +16,7 @@ const DownloadButton = ({ order }: any) => {
 
   return isClient ? (
     <PDFDownloadLink
-      fileName={`kart-invoice-${order.userDetails.firstName} ${order.userDetails.lastName}`}
+      fileName={`kartigo-invoice-${order.userDetails.firstName} ${order.userDetails.lastName}`}
       document={
         <InvoiceDocument
           user={order.userDetails}

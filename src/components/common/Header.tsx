@@ -6,6 +6,7 @@ import ReactQueryProvider from '@/providers/QueryProvider'
 import { fetchUserCart, fetchUserWishlist } from '@/utils/headerFetchUtil'
 import Image from 'next/image'
 import Link from 'next/link'
+import { MdAdminPanelSettings } from 'react-icons/md'
 import logo from '../../../public/kart-logo.png'
 import HeaderButtons from './HeaderButtons'
 import HeaderContainer from './HeaderContainer'
@@ -34,9 +35,9 @@ const Header = async ({ lang }: ILang) => {
 
   return (
     <HeaderContainer>
-      <div className='container flex justify-between bg-dark flex-col lg:flex-row'>
+      <div className='flex justify-between bg-dark flex-col lg:flex-row mx-6'>
         {/* logo */}
-        <div className='flex justify-between'>
+        <div className='flex justify-between items-center'>
           <Link href={isAdmin ? `/${lang}/admin-dashboard` : `/${lang}`}>
             <div className='flex gap-2 items-center'>
               <Image
@@ -53,22 +54,38 @@ const Header = async ({ lang }: ILang) => {
               </div>
             </div>
           </Link>
+          {isAdmin && (
+            <nav className='block lg:hidden'>
+              <Link
+                className='flex gap-2 bg-purple-600 p-2 self-end sm:ml-96 text-white rounded-md'
+                href={`/${lang}/admin-dashboard`}
+              >
+                <MdAdminPanelSettings />
+                <p className='text-xs flex gap-1'>
+                  Admin{' '}
+                  <span className='hidden min-[375px]:block'> Dashboard</span>
+                </p>
+              </Link>
+            </nav>
+          )}
 
           <div className='hidden sm:flex'>
             <ReactQueryProvider>
               <Search searchLocale={search} />
             </ReactQueryProvider>
           </div>
-          <HeaderDropDown
-            isAdmin={isAdmin}
-            user={session?.user}
-            search={search}
-            headerButtonTexts={headerButtonTexts}
-            wishlists={wishlists}
-            cartItems={cartItems}
-            lang={lang}
-            randomProductId={randomProductId}
-          />
+          {!isAdmin && (
+            <HeaderDropDown
+              isAdmin={isAdmin}
+              user={session?.user}
+              search={search}
+              headerButtonTexts={headerButtonTexts}
+              wishlists={wishlists}
+              cartItems={cartItems}
+              lang={lang}
+              randomProductId={randomProductId}
+            />
+          )}
         </div>
 
         <div className='hidden lg:flex'>

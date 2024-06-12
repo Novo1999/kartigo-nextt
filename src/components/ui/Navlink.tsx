@@ -23,7 +23,7 @@ const Navlink = ({ children, href }: NavlinkWrapper) => {
           (pathname === href && pathname.includes('admin-dashboard'))
             ? 'bg-gradient-to-r from-violet-500 to-purple-500 group p-3 rounded-lg'
             : 'text-gray-200 hover:bg-gradient-to-r rounded-lg hover:from-violet-500 hover:to-purple-500 bg-purple-700'
-        }  p-2 rounded-full hover:text-white transition flex items-center gap-1 shadow-lg border w-fit sm:w-24`}
+        }  p-2 rounded-full hover:text-white transition flex items-center gap-1 shadow-lg border w-fit sm:w-24 lg:w-48`}
       >
         {children}
       </motion.div>

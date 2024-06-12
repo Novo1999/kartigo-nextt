@@ -44,7 +44,7 @@ const QuantityButton = ({
   }
 
   return (
-    <section className='flex items-center space-x-2 relative min-w-[224px]'>
+    <section className='flex items-center space-x-2 relative xl:min-w-[224px]'>
       <div className='flex gap-2 items-center justify-between w-full'>
         <div className='flex gap-2 items-center'>
           <Button

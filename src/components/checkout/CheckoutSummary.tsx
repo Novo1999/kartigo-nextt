@@ -90,7 +90,7 @@ const CheckoutSummary = ({
   }
 
   return (
-    <div className='col-span-4 border border-gray-200 p-4 rounded'>
+    <div className='col-span-4 border border-gray-200 p-4 rounded w-full'>
       <h4 className='text-lg mb-4 text-blue-500 font-medium uppercase'>
         {order_summary}
       </h4>

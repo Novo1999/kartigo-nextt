@@ -21,7 +21,7 @@ const CartItem = ({
   return (
     <div
       key={id}
-      className='flex justify-between shadow-md p-4 gap-2 rounded-lg'
+      className='flex justify-between shadow-md p-4 gap-2 rounded-lg w-full'
     >
       <div
         style={{

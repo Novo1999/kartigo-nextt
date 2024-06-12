@@ -13,7 +13,7 @@ const Product = async ({ product, index }: IAdminProduct) => {
   const { price, discount_price, reviews, image } = product
   const imgBlur = await createImgBlur(image)
   return (
-    <Card className='w-[350px] flex flex-col justify-between pt-8 min-h-80 bg-gradient-to-r from-sky-400 to-cyan-300'>
+    <Card className='flex flex-col justify-between pt-8 min-h-80 bg-gradient-to-r from-sky-400 to-cyan-300'>
       <CardHeader>
         <Image
           width={600}

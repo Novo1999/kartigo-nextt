@@ -36,7 +36,7 @@ const OrderDetailsDialog = ({
               </p>
             </div>
             <PDFDownloadLink
-              fileName='LWS-Kart-Invoice'
+              fileName='Kartigo-Invoice'
               document={
                 <InvoiceDocument
                   user={showOrderDetails.orderDetails.user}

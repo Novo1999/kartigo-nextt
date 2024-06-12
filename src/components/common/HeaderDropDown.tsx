@@ -11,7 +11,7 @@ import { useState } from 'react'
 import { BsInfoSquareFill } from 'react-icons/bs'
 import { CiShoppingCart } from 'react-icons/ci'
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { MdHome } from 'react-icons/md'
+import { MdAdminPanelSettings, MdHome } from 'react-icons/md'
 import { RxCross1 } from 'react-icons/rx'
 import { Button } from '../ui/button'
 import Navlink from '../ui/Navlink'
@@ -63,15 +63,25 @@ const HeaderDropDown = ({
               </Navlink>
             </>
           )}
+          {isAdmin && (
+            <div className='relative bottom-20'>
+              <Navlink href={`/${lang}`}>
+                <MdAdminPanelSettings />
+                Admin Dashboard
+              </Navlink>
+            </div>
+          )}
         </div>
-        <Link href={`/${lang}/product-details/${randomProductId}`}>
-          <Button className='hover:border group border-blue-500 hover:bg-orange-500 mt-4 bg-orange-600 transition-all duration-200 hover:scale-[102%] text-xs sm:text-md'>
-            <span className='group-hover:rotate-180 transition-all duration-300'>
-              🍀
-            </span>{' '}
-            I am feeling lucky
-          </Button>
-        </Link>
+        {!isAdmin && (
+          <Link href={`/${lang}/product-details/${randomProductId}`}>
+            <Button className='hover:border group border-blue-500 mb-4 sm:mb-1 hover:bg-orange-500 mt-4 bg-orange-600 transition-all duration-200 hover:scale-[102%] text-xs sm:text-md'>
+              <span className='group-hover:rotate-180 transition-all duration-300'>
+                🍀
+              </span>{' '}
+              I am feeling lucky
+            </Button>
+          </Link>
+        )}
         {!isAdmin && (
           <HeaderButtons
             user={user}

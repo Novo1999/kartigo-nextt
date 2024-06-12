@@ -11,7 +11,7 @@ const AccountInfo = async ({ lang }: { lang: ILang['lang'] }) => {
 
   return (
     <>
-      <div className=' grid grid-cols-3 gap-4 mx-auto max-w-5xl *:animate-fadeUp'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto max-w-5xl *:animate-fadeUp'>
         <PersonalProfile dictionary={accountPage as any} user={session?.user} />
         <ShippingAddress dictionary={accountPage as any} user={session?.user} />
         <BillingAddress dictionary={accountPage as any} user={session?.user} />

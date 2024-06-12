@@ -21,7 +21,7 @@ export function OrderPagination({ orders }: any) {
 
   return (
     <Pagination className='dark:text-white'>
-      <PaginationContent className='*:cursor-pointer'>
+      <PaginationContent className='*:cursor-pointer flex flex-wrap'>
         {currentPage > 1 && (
           <PaginationItem>
             <PaginationPrevious
