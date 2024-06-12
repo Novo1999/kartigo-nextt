@@ -129,12 +129,12 @@ const Search = ({ searchLocale }: { searchLocale: string }) => {
           }}
         />
 
-        <div ref={scope} className='shadow-lg relative'>
+        <div ref={scope} className='shadow-lg relative left-6 lg:left-0'>
           <motion.ul
             ref={menuRef}
             className={`absolute ${
               !!value ? 'block' : 'hidden'
-            } bg-white shadow-md w-96 h-96 absolute right-6 top-12 rounded-md z-50 space-y-4 overflow-y-auto p-2 dark:bg-slate-800`}
+            } bg-white shadow-md w-80 lg:w-96 h-96 absolute right-6 top-12 rounded-md z-50 space-y-4 overflow-y-auto p-2 dark:bg-slate-800`}
           >
             <p className='text-orange-500 italic text-xs flex gap-1'>
               Search results for : {value} (

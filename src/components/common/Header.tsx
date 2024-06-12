@@ -53,6 +53,12 @@ const Header = async ({ lang }: ILang) => {
               </div>
             </div>
           </Link>
+
+          <div className='hidden sm:flex'>
+            <ReactQueryProvider>
+              <Search searchLocale={search} />
+            </ReactQueryProvider>
+          </div>
           <HeaderDropDown
             isAdmin={isAdmin}
             user={session?.user}
@@ -64,10 +70,8 @@ const Header = async ({ lang }: ILang) => {
             randomProductId={randomProductId}
           />
         </div>
+
         <div className='hidden lg:flex'>
-          <ReactQueryProvider>
-            <Search searchLocale={search} />
-          </ReactQueryProvider>
           {/* dont show this buttons if user is admin */}
           {!isAdmin && (
             <HeaderButtons

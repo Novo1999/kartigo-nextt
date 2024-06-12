@@ -35,22 +35,22 @@ export default async function RootLayout({
   return (
     // suppress hydration warning needed to be used for next theme flashing problem, the flashing can still happen in dev mode by the way, u might see internal server error in the console but it's nothing to worry about
     <main className={`${poppins.className}`} suppressHydrationWarning>
-      {/* <ThemeProvider> */}
-      <ToastProvider>
-        <CartProvider>
-          <WishlistProvider>
-            <Header lang={lang} />
-            <Navbar lang={lang} />
-            {children}
-            <Footer lang={lang} />
-            <Copyright lang={lang} />
-          </WishlistProvider>
-        </CartProvider>
-        <Toaster />
-      </ToastProvider>
-      <ScrollProgress />
-      <ScrollToTop />
-      {/* </ThemeProvider> */}
+      <ThemeProvider>
+        <ToastProvider>
+          <CartProvider>
+            <WishlistProvider>
+              <Header lang={lang} />
+              <Navbar lang={lang} />
+              {children}
+              <Footer lang={lang} />
+              <Copyright lang={lang} />
+            </WishlistProvider>
+          </CartProvider>
+          <Toaster />
+        </ToastProvider>
+        <ScrollProgress />
+        <ScrollToTop />
+      </ThemeProvider>
     </main>
   )
 }

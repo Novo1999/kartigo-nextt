@@ -54,7 +54,7 @@ const ShopPage = async ({
   return (
     <main className='min-h-[40vh] dark:bg-slate-800'>
       <FilterProvider>
-        <div className='flex justify-evenly md:px-24 xl:px-48 gap-2 items-center'>
+        <div className='flex justify-evenly md:px-24 xl:px-48 gap-2 items-center flex-col lg:flex-row'>
           <Breadcrumb />
           <ProductCount
             lang={lang}

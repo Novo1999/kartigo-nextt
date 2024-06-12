@@ -35,7 +35,7 @@ const Navbar = async ({ lang }: ILang) => {
   const randomProductId = await getRandomProductId()
 
   return (
-    <nav className='dark:bg-gradient-to-r dark:from-gray-700 dark:to-black bg-teal-700 hidden lg:block'>
+    <nav className='bg-slate-400 dark:bg-slate-800 hidden lg:block'>
       <div className='container flex '>
         {/* <DrawerTriggerBtn /> */}
         {!isAdmin && (

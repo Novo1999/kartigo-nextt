@@ -46,17 +46,20 @@ const HeaderDropDown = ({
           </div>
         </ReactQueryProvider>
         {/* dont show this buttons if user is admin */}
-        <div className='flex gap-4 mt-24 '>
+        <div className='flex gap-4 mt-24 sm:mt-0'>
           {!isAdmin && (
             <>
               <Navlink href={`/${lang}`}>
                 <MdHome />
+                Home
               </Navlink>
               <Navlink href={`/${lang}/shop`}>
                 <CiShoppingCart className='text-xl font-bold' />
+                Shop
               </Navlink>
               <Navlink href={`/${lang}/about`}>
                 <BsInfoSquareFill />
+                About
               </Navlink>
             </>
           )}

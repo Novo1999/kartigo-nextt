@@ -47,17 +47,18 @@ const ShopPagination = ({ productCount }: { productCount: number }) => {
             />
           </PaginationItem>
         )}
-
-        {PaginationButtons.map((page) => (
-          <PaginationItem key={page}>
-            <PaginationLink
-              isActive={page === currentPage}
-              onClick={() => handlePagination(page)}
-            >
-              {isLocaleBangla ? convertToBengali(page) : page}
-            </PaginationLink>
-          </PaginationItem>
-        ))}
+        <div className='flex flex-wrap'>
+          {PaginationButtons.map((page) => (
+            <PaginationItem key={page}>
+              <PaginationLink
+                isActive={page === currentPage}
+                onClick={() => handlePagination(page)}
+              >
+                {isLocaleBangla ? convertToBengali(page) : page}
+              </PaginationLink>
+            </PaginationItem>
+          ))}
+        </div>
 
         {currentPage < totalPages && (
           <PaginationItem>

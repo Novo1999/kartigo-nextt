@@ -23,7 +23,7 @@ export function FAQAccordion() {
       <Accordion
         type='single'
         collapsible
-        className='w-[600px] m-auto rounded-md border shadow-md p-4 mb-12 pb-4'
+        className='w-[300px] lg:w-[600px] m-auto rounded-md border shadow-md p-4 mb-12 pb-4'
       >
         <AccordionItem value='item-1'>
           <AccordionTrigger>
