@@ -27,7 +27,7 @@ const HeaderButtons = ({
   useUseEffectMadness(wishlists, cartItems)
 
   return (
-    <div className='flex sm:items-center space-x-4 dark:*:text-white sm:flex-row gap-6 sm:gap-0 p-2 sm:p-0 items-start flex-col'>
+    <div className='flex items-center sm:items-center space-x-4 dark:*:text-white sm:flex-row gap-6 sm:gap-0 p-2 sm:p-0 flex-col'>
       <ThemeSwitcher />
       <Link
         href={

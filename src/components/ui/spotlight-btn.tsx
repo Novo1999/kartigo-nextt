@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 import { CgSearch } from 'react-icons/cg'
+import { Button } from './button'
 
 const SpotlightButton = ({
   disabled,
@@ -46,7 +47,7 @@ const SpotlightButton = ({
         onClick={onClick}
         whileTap={{ scale: 0.985 }}
         ref={btnRef}
-        className='relative w-36 h-10 overflow-hidden rounded-lg flex justify-center bg-gradient-to-r from-slate-900 to-slate-700 px-4 py-3 text-lg font-medium text-white'
+        className='relative w-36 h-10 overflow-hidden rounded-lg hidden sm:flex justify-center bg-gradient-to-r from-slate-900 to-slate-700 px-4 py-3 text-lg font-medium text-white'
       >
         <span className='pointer-events-none relative z-10 m-auto text-sm mix-blend-difference hidden sm:block'>
           {searchLocale}
@@ -59,6 +60,9 @@ const SpotlightButton = ({
           className='pointer-events-none absolute left-[50%] top-[50%] h-20 w-20 -translate-x-[60%] -translate-y-[50%] rounded-full bg-gradient-to-r from-indigo-200 to-yellow-100'
         />
       </motion.button>
+      <Button variant='ringHover' className='block sm:hidden'>
+        <CgSearch />
+      </Button>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import { getDictionary } from '@/app/[lang]/dictionaries'
 import { auth } from '@/auth'
 
+import { getRandomProductId } from '@/db/queries/product.queries'
 import ReactQueryProvider from '@/providers/QueryProvider'
 import { fetchUserCart, fetchUserWishlist } from '@/utils/headerFetchUtil'
 import Image from 'next/image'
@@ -29,35 +30,41 @@ const Header = async ({ lang }: ILang) => {
     account,
   }
 
+  const randomProductId = await getRandomProductId()
+
   return (
     <HeaderContainer>
-      <div className='container flex items-center justify-between bg-dark'>
-        <Link href={isAdmin ? `/${lang}/admin-dashboard` : `/${lang}`}>
-          <div className='flex gap-2 items-center'>
-            <Image
-              src={logo}
-              width={1200}
-              height={1200}
-              alt='Logo'
-              className='size-16'
-              placeholder='blur'
-            />
-            <div className='flex gap-1 dark:text-white'>
-              <p className='font-semibold'>Karti</p>
-              <p className='font-bold'>Go</p>
+      <div className='container flex justify-between bg-dark flex-col lg:flex-row'>
+        {/* logo */}
+        <div className='flex justify-between'>
+          <Link href={isAdmin ? `/${lang}/admin-dashboard` : `/${lang}`}>
+            <div className='flex gap-2 items-center'>
+              <Image
+                src={logo}
+                width={1200}
+                height={1200}
+                alt='Logo'
+                className='size-16'
+                placeholder='blur'
+              />
+              <div className='flex gap-1 dark:text-white'>
+                <p className='font-semibold'>Karti</p>
+                <p className='font-bold'>Go</p>
+              </div>
             </div>
-          </div>
-        </Link>
-
-        <HeaderDropDown
-          isAdmin={isAdmin}
-          user={session?.user}
-          search={search}
-          headerButtonTexts={headerButtonTexts}
-          wishlists={wishlists}
-          cartItems={cartItems}
-        />
-        <div className='hidden sm:flex'>
+          </Link>
+          <HeaderDropDown
+            isAdmin={isAdmin}
+            user={session?.user}
+            search={search}
+            headerButtonTexts={headerButtonTexts}
+            wishlists={wishlists}
+            cartItems={cartItems}
+            lang={lang}
+            randomProductId={randomProductId}
+          />
+        </div>
+        <div className='hidden lg:flex'>
           <ReactQueryProvider>
             <Search searchLocale={search} />
           </ReactQueryProvider>
@@ -71,6 +78,11 @@ const Header = async ({ lang }: ILang) => {
             />
           )}
         </div>
+      </div>
+      <div className='flex sm:hidden'>
+        <ReactQueryProvider>
+          <Search searchLocale={search} />
+        </ReactQueryProvider>
       </div>
     </HeaderContainer>
   )

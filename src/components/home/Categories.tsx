@@ -23,7 +23,7 @@ const Categories = async ({ lang }: ILang) => {
       <h2 className='text-2xl font-medium text-gray-800 dark:text-white uppercase mb-6'>
         {category}
       </h2>
-      <div className='grid grid-cols-3 gap-3'>
+      <div className='grid grid-cols-1 sm:grid-cols-3 gap-3'>
         {categoryNames.map((category, index) => (
           <div
             key={category}

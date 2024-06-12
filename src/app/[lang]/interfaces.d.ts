@@ -41,6 +41,8 @@ interface IHeaderButtons {
   user: SessionWith_Id['user']
   search?: string
   isAdmin?: boolean
+  lang?: 'en' | 'bn'
+  randomProductId?: string
 }
 
 interface IThemeContext {
