@@ -17,8 +17,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'LWS Kart',
-  description: 'E-commerce Application of Learn with Sumit',
+  title: 'Kartigo',
+  description: 'Kartigo E-commerce',
 }
 
 export default async function RootLayout({

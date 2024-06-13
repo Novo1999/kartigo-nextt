@@ -22,7 +22,7 @@
   "trending": "ট্রেন্ডিং পণ্য",
   "view_product": "পণ্য দেখুন",
   "footer": {
-    "brand": "LWSkart",
+    "brand": "kartigo",
     "message": "আমাদের সংগ্রহে আপনি খুশি হয়েছেন বলে আশা করি",
     "sections": {
       "solutions": {
@@ -34,7 +34,7 @@
         "items": ["মূল্য নির্ধারণ", "গাইডস", "API স্ট্যাটাস"]
       }
     },
-    "copyright": "© LWSkart - সমস্ত অধিকার সংরক্ষিত"
+    "copyright": "© kartigo - সমস্ত অধিকার সংরক্ষিত"
   },
   "cartIsEmpty": "কার্ট খালি",
   "goTo": "যাও:",

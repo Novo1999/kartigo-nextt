@@ -19,8 +19,10 @@ const Header = async ({ lang }: ILang) => {
 
   const isAdmin = session?.user?.role === 'admin'
 
+  // fetch user wishlists
   const wishlists =
     session?.user?._id && (await fetchUserWishlist(session?.user?._id))
+  // fetch user cart items
   const cartItems =
     session?.user?._id && (await fetchUserCart(session?.user?._id))
 
@@ -69,7 +71,7 @@ const Header = async ({ lang }: ILang) => {
             </nav>
           )}
 
-          <div className='hidden sm:flex'>
+          <div className='hidden sm:flex xl:ml-36'>
             <ReactQueryProvider>
               <Search searchLocale={search} />
             </ReactQueryProvider>

@@ -20,14 +20,14 @@ export function ContainerScrollSection() {
               <h1 className='text-4xl font-semibold text-black dark:text-white'>
                 ভালো জীবন যাপন করুন <br />
                 <span className='text-4xl md:text-[6rem] font-bold mt-1 leading-none'>
-                  LWS Kart এর সাথে
+                  Kartigo এর সাথে
                 </span>
               </h1>
             ) : (
               <h1 className='text-4xl font-semibold text-black dark:text-white'>
                 Live better <br />
                 <span className='text-4xl md:text-[6rem] font-bold mt-1 leading-none'>
-                  with LWS Kart
+                  with Kartigo
                 </span>
               </h1>
             )}

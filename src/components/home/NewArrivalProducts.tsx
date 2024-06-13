@@ -25,13 +25,11 @@ const NewArrivalProducts = ({
       <CarouselContent className='flex'>
         {products.map((product) => (
           <CarouselItem key={product._id} className='md:basis-1/2 lg:basis-1/3'>
-            <div className='p-1'>
-              <Card>
-                <CardContent className='flex aspect-square items-center justify-center p-6'>
-                  <Product lang={lang} product={product} key={product._id} />
-                </CardContent>
-              </Card>
-            </div>
+            <Card>
+              <CardContent className='flex aspect-square items-center justify-center p-2'>
+                <Product lang={lang} product={product} key={product._id} />
+              </CardContent>
+            </Card>
           </CarouselItem>
         ))}
       </CarouselContent>

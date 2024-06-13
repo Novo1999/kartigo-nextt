@@ -109,7 +109,7 @@ const AddtoCartButton = ({
       >
         {priceIsHigh
           ? lang === 'en'
-            ? 'Pocket gorom? 🔥'
+            ? 'Wallet on fire? 🔥'
             : 'পকেট গরম? 🔥'
           : lang === 'en'
           ? 'Just do it! 🙄'

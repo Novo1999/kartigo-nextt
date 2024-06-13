@@ -46,7 +46,7 @@ export const REVIEWS = [
     designation: 'Verified Buyer',
     content: (
       <p>
-        LWS Kart has an incredible selection of products, and the customer
+        Kartigo has an incredible selection of products, and the customer
         service is top-notch. <Highlight>I received my order</Highlight> in just
         two days! Highly recommended.
       </p>
@@ -70,7 +70,7 @@ export const REVIEWS = [
     designation: 'New Customer',
     content: (
       <p>
-        I was skeptical at first, but LWS Kart exceeded my expectations.
+        I was skeptical at first, but Kartigo exceeded my expectations.
         <Highlight>Returns are hassle-free</Highlight>, and the support team is
         very responsive. Definitely a five-star experience.
       </p>
@@ -82,7 +82,7 @@ export const REVIEWS = [
     designation: 'Tech Enthusiast',
     content: (
       <p>
-        LWS Kart offers a fantastic range of electronics.{' '}
+        Kartigo offers a fantastic range of electronics.{' '}
         <Highlight>Got a great deal</Highlight> on my new laptop. Delivery was
         prompt, and the product arrived in perfect condition.
       </p>
@@ -94,7 +94,7 @@ export const REVIEWS = [
     designation: 'Fashion Blogger',
     content: (
       <p>
-        I love shopping for clothes on LWS Kart. The variety is amazing, and
+        I love shopping for clothes on Kartigo. The variety is amazing, and
         <Highlight>the quality is top-notch</Highlight>. My wardrobe has never
         looked better!
       </p>

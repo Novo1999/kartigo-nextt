@@ -22,7 +22,7 @@
   "trending": "Trending",
   "view_product": "View Product",
   "footer": {
-    "brand": "LWSkart",
+    "brand": "Kartigo",
     "message": "We hope you were happy with our collection",
     "sections": {
       "solutions": {
@@ -34,7 +34,7 @@
         "items": ["Pricing", "Guides", "API Status"]
       }
     },
-    "copyright": "© LWSkart - All Right Reserved"
+    "copyright": "© Kartigo - All Right Reserved"
   },
   "cartIsEmpty": "Cart is empty",
   "goTo": "Go to:",

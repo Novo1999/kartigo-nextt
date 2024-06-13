@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { BiSolidLogIn } from 'react-icons/bi'
 import { BsInfoSquareFill } from 'react-icons/bs'
 import { CiShoppingCart } from 'react-icons/ci'
-import { MdHome } from 'react-icons/md'
+import { MdAdminPanelSettings, MdHome } from 'react-icons/md'
 import SignOut from '../auth/SignOut'
 import DrawerTriggerBtn from '../shop/DrawerTrigger'
 import { Button } from '../ui/button'
@@ -63,7 +63,7 @@ const Navbar = async ({ lang }: ILang) => {
                   <p>{about}</p>
                 </Navlink>
                 <Link href={`/${lang}/product-details/${randomProductId}`}>
-                  <Button className='hover:border group border-blue-500 hover:bg-orange-500 bg-orange-600 transition-all duration-200 hover:scale-[102%] text-xs sm:text-md'>
+                  <Button className='hover:border group border-blue-500 hover:bg-orange-500 bg-gradient-to-r from-rose-500 to-red-500 transition-all duration-200 hover:scale-[102%] text-xs sm:text-md'>
                     <span className='group-hover:rotate-180 transition-all duration-300'>
                       🍀
                     </span>{' '}
@@ -74,7 +74,10 @@ const Navbar = async ({ lang }: ILang) => {
             )}
 
             {isAdmin && (
-              <Navlink href={`/${lang}/admin-dashboard`}>{admin}</Navlink>
+              <Navlink href={`/${lang}/admin-dashboard`}>
+                <MdAdminPanelSettings />
+                {admin}
+              </Navlink>
             )}
           </div>
           <div className='flex gap-4'>

@@ -74,7 +74,7 @@ const LanguageSwitcher = () => {
   }
 
   return (
-    <div className='flex gap-4 items-center text-white '>
+    <div className='flex gap-4 items-center text-black p-1 bg-gradient-to-r from-rose-100 to-teal-100 rounded-md'>
       <div className='relative'>
         <button
           className='flex items-center gap-2'

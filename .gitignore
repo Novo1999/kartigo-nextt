@@ -36,3 +36,7 @@ yarn-error.log*
 next-env.d.ts
 .env
 dist
+.vs/kartigo/v17/.wsuo
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/kartigo/v17/DocumentLayout.json

@@ -69,14 +69,14 @@ const StaggeredDropDown = ({
       >
         <button
           onClick={() => setOpen((prev) => !prev)}
-          className='flex items-center gap-2 px-3 py-2 rounded-md text-indigo-50 bg-gradient-to-r from-fuchsia-500 to-cyan-500 transition-colors'
+          className='flex items-center gap-2 px-3 py-2 rounded-md text-indigo-50 bg-gradient-to-r from-rose-400 to-red-500 transition-colors'
         >
           <motion.span
             key={currentIconIndex}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.2 }}
           >
             <CurrentIcon />
           </motion.span>

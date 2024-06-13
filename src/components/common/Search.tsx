@@ -112,7 +112,7 @@ const Search = ({ searchLocale }: { searchLocale: string }) => {
             setQuery(value)
           }}
           type='search'
-          className='placeholder:relative placeholder:left-2 pl-8 w-96'
+          className='placeholder:relative placeholder:left-2 pl-8 lg:w-36 xl:w-96'
         />
         <div onClick={handleTypeEffectClick} className='absolute left-12'>
           {!searchIsFocused && !onProductDetailsPage && <TypeEffect />}
