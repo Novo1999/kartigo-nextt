@@ -1,9 +1,11 @@
 import { Breadcrumb, ShopWrapper, Sidebar } from '@/components'
 import { ProductCount } from '@/components/product/ProductCount'
 import ProductLimit from '@/components/product/ProductLimit'
+import MobileFilter from '@/components/shop/MobileFilter'
 import ProductsList from '@/components/shop/Products'
 import ProductSorter from '@/components/shop/ProductSorter'
 import ShopPagination from '@/components/shop/ShopPagination'
+import SidebarWrapper from '@/components/shop/SidebarWrapper'
 import { getAllProducts, getProductsCount } from '@/db/queries/product.queries'
 import FilterProvider from '@/providers/FilterProvider'
 import createSearchParamsObjectForProducts from '@/utils/createSearchParamsObjectForProducts'
@@ -56,16 +58,20 @@ const ShopPage = async ({
       <FilterProvider>
         <div className='flex justify-evenly md:px-24 xl:px-48 gap-2 items-center flex-col lg:flex-row'>
           <Breadcrumb />
-          <ProductCount
-            lang={lang}
-            products={JSON.parse(JSON.stringify(products))}
-          />
+          <div className='flex justify-between gap-12'>
+            <MobileFilter lang={lang} />
+            <ProductCount
+              lang={lang}
+              products={JSON.parse(JSON.stringify(products))}
+            />
+          </div>
           <ProductSorter />
           <ProductLimit length={productCount} />
         </div>
         <ShopWrapper>
-          {/* <DrawerTrigger /> */}
-          <Sidebar lang={lang} />
+          <SidebarWrapper visiblityClassNames='hidden lg:block'>
+            <Sidebar lang={lang} />
+          </SidebarWrapper>
           <ProductsList lang={lang} searchParams={searchParams} />
         </ShopWrapper>
         <ShopPagination productCount={productCount} />

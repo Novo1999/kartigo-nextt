@@ -17,7 +17,7 @@ const RelatedProducts = async ({
       <h2 className='text-2xl font-medium text-gray-800 uppercase mb-6'>
         {relatedProd}
       </h2>
-      <div className='grid grid-cols-4 gap-6'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
         {relatedProducts.map((product) => (
           <Product product={product} key={product._id} />
         ))}

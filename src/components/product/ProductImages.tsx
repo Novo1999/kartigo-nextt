@@ -23,6 +23,11 @@ const ProductImages = ({
       setDirection('left')
     }
     setCurrentImageIndex(index)
+    // scroll to top
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
   }
 
   const currentImage =
@@ -44,7 +49,7 @@ const ProductImages = ({
         </AnimatePresence>
       </BackgroundGradient>
       {/* small images */}
-      <div className='grid grid-cols-5 gap-4 mt-4'>
+      <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mt-4'>
         {[image, ...otherImages].map((img, index) => {
           return (
             <BackgroundGradient key={index}>
@@ -59,7 +64,7 @@ const ProductImages = ({
                   height={2000}
                   src={img}
                   alt={`product${index}`}
-                  className='w-full cursor-pointer border border-primary h-[76px] object-cover relative'
+                  className='w-full cursor-pointer border border-primary h-36 sm:h-16 object-cover relative'
                 />
               </motion.div>
             </BackgroundGradient>
