@@ -44,7 +44,7 @@ const ProductDetailsPage = async ({
   const relatedProducts = await getRelatedProducts(product.category, id)
 
   return (
-    <main className='dark:bg-slate-800 dark:text-white'>
+    <main className='dark:bg-slate-800 dark:text-white sm:container'>
       <Breadcrumb product={JSON.parse(JSON.stringify(product))} />
       <ProductDetails
         lang={lang}
