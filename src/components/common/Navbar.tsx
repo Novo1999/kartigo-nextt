@@ -7,7 +7,6 @@ import { BsInfoSquareFill } from 'react-icons/bs'
 import { CiShoppingCart } from 'react-icons/ci'
 import { MdAdminPanelSettings, MdHome } from 'react-icons/md'
 import SignOut from '../auth/SignOut'
-import DrawerTriggerBtn from '../shop/DrawerTrigger'
 import { Button } from '../ui/button'
 import Navlink from '../ui/Navlink'
 import Dropdown from './Dropdown'
@@ -35,7 +34,7 @@ const Navbar = async ({ lang }: ILang) => {
   const randomProductId = await getRandomProductId()
 
   return (
-    <nav className='bg-slate-400 dark:bg-slate-800 hidden lg:block'>
+    <nav className='bg-slate-300 dark:bg-slate-800 hidden lg:block'>
       <div className='container flex '>
         {/* <DrawerTriggerBtn /> */}
         {!isAdmin && (

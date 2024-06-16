@@ -29,14 +29,14 @@ const HeaderButtons = ({
   useUseEffectMadness(wishlists, cartItems)
 
   return (
-    <div className='flex items-center sm:items-center space-x-4 dark:*:text-white sm:flex-row gap-6 sm:gap-0 p-2 sm:p-0 flex-col'>
+    <div className='flex items-center sm:items-center  space-x-4 dark:*:text-white sm:flex-row gap-6 sm:gap-0 p-2 sm:p-0 flex-col'>
       <ThemeSwitcher />
       <ButtonBadge>
         <Link
           href={
             !isLoggedIn ? `/${lang}/login?redirected_by=wishlist` : '/wishlist'
           }
-          className='text-center text-gray-700  relative flex items-center gap-2 group-hover:text-rose-500'
+          className='text-center text-gray-700  relative flex items-center gap-2 dark:text-white group-hover:text-rose-500'
         >
           <FaHeart />
           <div className='text-xs leading-3 hover:underline underline-offset-4'>
@@ -58,7 +58,7 @@ const HeaderButtons = ({
           href={
             !isLoggedIn ? `/${lang}/login?redirected_by=checkout` : '/checkout'
           }
-          className='text-center text-gray-700 hover:text-primary  relative gap-2 flex items-center justify-center hover:drop-shadow-lg hover:text-cyan-600 hover:-translate-y-0.5 transition-all duration-300'
+          className='text-center text-gray-700 dark:text-white hover:text-primary relative gap-2 flex items-center justify-center hover:drop-shadow-lg hover:text-cyan-600 hover:-translate-y-0.5 transition-all duration-300'
         >
           <FaShoppingCart />
           <div className='text-xs leading-3  hover:underline underline-offset-4'>
@@ -81,7 +81,7 @@ const HeaderButtons = ({
           href={
             !isLoggedIn ? `/${lang}/login?redirected_by=account` : '/account'
           }
-          className='text-center text-gray-700 hover:text-primary relative gap-2 flex items-center justify-center hover:drop-shadow-lg hover:text-blue-600 hover:-translate-y-0.5 transition-all duration-300'
+          className='text-center text-gray-700 hover:text-primary relative dark:text-white gap-2 flex items-center justify-center hover:drop-shadow-lg hover:text-blue-600 hover:-translate-y-0.5 transition-all duration-300'
         >
           {user?.image ? (
             <Avatar>

@@ -93,7 +93,7 @@ const Search = ({ searchLocale }: { searchLocale: string }) => {
 
   return (
     <div
-      className={`w-full max-w-xl my-6 sm:my-0 justify-center ml-0 sm:ml-24  ${
+      className={`w-full max-w-xl my-6 sm:my-0 justify-center ml-0 sm:ml-24 2xl:ml-60  ${
         pathnameIncludesAdminDashboard ? 'hidden' : 'flex'
       }`}
       ref={containerRef}

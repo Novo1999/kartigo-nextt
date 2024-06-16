@@ -36,7 +36,7 @@ const SliderToggle = ({
     <div className='relative flex w-fit items-center rounded-full'>
       <button
         className={`${TOGGLE_CLASSES} ${
-          !selected ? 'text-white' : 'text-slate-300'
+          selected === 'light' ? 'text-white' : 'text-slate-300'
         }`}
         onClick={() => handleTheme('light')}
       >
@@ -59,7 +59,8 @@ const SliderToggle = ({
       >
         <motion.span
           layout
-          transition={{ type: 'spring', damping: 15, stiffness: 250 }}
+          initial={false}
+          transition={{ type: 'just', damping: 15, stiffness: 250 }}
           className='h-full w-1/2 rounded-full bg-gradient-to-r from-rose-400 to-red-500'
         />
       </div>
