@@ -49,15 +49,15 @@ const HeaderDropDown = ({
         <div className='flex gap-4 mt-24 sm:mt-0'>
           {!isAdmin && (
             <>
-              <Navlink href={`/${lang}`}>
+              <Navlink onClick={() => setIsOpen(false)} href={`/${lang}`}>
                 <MdHome />
                 Home
               </Navlink>
-              <Navlink href={`/${lang}/shop`}>
+              <Navlink onClick={() => setIsOpen(false)} href={`/${lang}/shop`}>
                 <CiShoppingCart className='text-xl font-bold' />
                 Shop
               </Navlink>
-              <Navlink href={`/${lang}/about`}>
+              <Navlink onClick={() => setIsOpen(false)} href={`/${lang}/about`}>
                 <BsInfoSquareFill />
                 About
               </Navlink>
@@ -65,7 +65,7 @@ const HeaderDropDown = ({
           )}
           {isAdmin && (
             <div className='relative bottom-20'>
-              <Navlink href={`/${lang}`}>
+              <Navlink onClick={() => setIsOpen(false)} href={`/${lang}`}>
                 <MdAdminPanelSettings />
                 Admin Dashboard
               </Navlink>
@@ -73,7 +73,10 @@ const HeaderDropDown = ({
           )}
         </div>
         {!isAdmin && (
-          <Link href={`/${lang}/product-details/${randomProductId}`}>
+          <Link
+            onClick={() => setIsOpen(false)}
+            href={`/${lang}/product-details/${randomProductId}`}
+          >
             <Button className='hover:border group border-blue-500 mb-4 sm:mb-1 hover:bg-orange-500 mt-4 bg-orange-600 transition-all duration-200 hover:scale-[102%] text-xs sm:text-md'>
               <span className='group-hover:rotate-180 transition-all duration-300'>
                 🍀

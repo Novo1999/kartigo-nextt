@@ -5,14 +5,18 @@ import { usePathname } from 'next/navigation'
 
 interface NavlinkWrapper extends WrapperChild {
   href: string
+  onClick?: () => void
 }
 
-const Navlink = ({ children, href }: NavlinkWrapper) => {
+const Navlink = ({ children, href, onClick }: NavlinkWrapper) => {
   const pathname = usePathname()
 
   // the about and contact page is unused
   return (
-    <Link href={href !== '/about' && href !== '/contact' ? href : '/'}>
+    <Link
+      onClick={onClick}
+      href={href !== '/about' && href !== '/contact' ? href : '/'}
+    >
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
