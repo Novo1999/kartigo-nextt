@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import { useRef, useState } from 'react'
 
-export const DirectionAwareHover = ({
+export const ProductImage = ({
   imageUrl,
   children,
   childrenClassName,

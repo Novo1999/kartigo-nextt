@@ -43,7 +43,7 @@ const ProductDetails = async ({
   const userId = session?.user?._id?.toString() ?? session?.user?.id?.toString()
 
   return (
-    <div className='mx-2 grid grid-cols-1 sm:container sm:mx-0 sm:grid-cols-2 gap-6'>
+    <div className='mx-2 grid grid-cols-1 sm:container sm:mx-0 sm:grid-cols-2 gap-6 animate-fadeUp'>
       <ProductImages image={image} otherImages={otherImages as string[]} />
       <div>
         <h2 className='text-3xl font-medium uppercase mb-2 dark:text-white'>

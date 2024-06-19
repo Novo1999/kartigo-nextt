@@ -9,20 +9,23 @@ import SidebarStockStatus from './SidebarStockStatus'
 const Sidebar = async ({ lang }: ILang) => {
   const categories: ICategory[] = await getAllCategories()
   const {
-    filter: { categories: localeCategories, ...rest },
+    filter: { categories: localeCategories, ...moreLocales },
   } = await getDictionary(lang)
 
   return (
-    <div className='divide-y divide-gray-200 space-y-2'>
+    <div className='divide-y divide-gray-200 space-y-2 animate-fadeUp'>
       <div>
         <ResetFilters />
         <h3 className='text-xl text-gray-800 dark:text-white mb-3 uppercase font-medium'>
           {localeCategories}
         </h3>
-        <SidebarCategories categories={categories} localeCategories={rest} />
+        <SidebarCategories
+          categories={categories}
+          localeCategories={moreLocales}
+        />
       </div>
-      <SidebarStockStatus locale={rest} />
-      <SidebarPriceSize locale={rest} />
+      <SidebarStockStatus locale={moreLocales} />
+      <SidebarPriceSize locale={moreLocales} />
       <ColorSlider />
     </div>
   )

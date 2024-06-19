@@ -2,11 +2,10 @@ import { getDictionary } from '@/app/[lang]/dictionaries'
 import { auth } from '@/auth'
 import createImgBlur from '@/utils/createImgBlur'
 import getProductDiscountPercentage from '@/utils/getProductDiscountPercentage'
-import getReviewStars from '@/utils/getReviewStars'
 import Link from 'next/link'
 import { MdDiscount } from 'react-icons/md'
 import { Badge } from '../ui/badge'
-import { DirectionAwareHover } from '../ui/image-hover'
+import { ProductImage } from '../ui/image-hover'
 import AddtoCartButton from './AddtoCartButton'
 import ProductWishlistButton from './ProductWishlistButton'
 
@@ -44,12 +43,13 @@ const Product = async ({
   const imgBlur = await createImgBlur(image)
 
   return (
-    <Card className='w-full pt-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 '>
+    <Card className='w-full pt-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fadeUp'>
       <CardContent className='p-3 shadow-md '>
         <div className='bg-white shadow rounded overflow-hidden group dark:*:bg-slate-800'>
           <div className='relative'>
             <Link href={`/product-details/${id}`}>
-              <DirectionAwareHover
+              {/* product image hover */}
+              <ProductImage
                 imageClassName={`${!hasStock ? 'grayscale' : 'grayscale-0'}`}
                 imgBlur={imgBlur}
                 imageUrl={image}
