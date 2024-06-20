@@ -49,8 +49,8 @@ const Categories = async ({ lang }: ILang) => {
                 </p>
               </div>
               <div className='absolute inset-0 transition-all duration-300 opacity-0 group-hover:opacity-100'>
-                <div className='absolute inset-0 bg-gradient-to-r from-sky-400 to-blue-500 opacity-30 blur-xl'></div>
-                <div className='absolute inset-0 bg-gradient-to-r from-sky-400 to-blue-500 opacity-10'></div>
+                <div className='absolute inset-0 bg-gradient-to-r from-rose-100 to-teal-100 opacity-30 blur-xl'></div>
+                <div className='absolute inset-0 bg-gradient-to-r from-rose-100 to-teal-100 opacity-10'></div>
               </div>
             </Link>
           </div>
