@@ -40,7 +40,7 @@ const WishlistItem = ({
   const isLoading = userWishlist.loading && clickedProduct === product._id
 
   return (
-    <Card className='mb-2 p-2 sm:p-4 hover:scale-[102%] hover:border hover:border-purple-600 transition-all duration-300'>
+    <Card className='mb-2 p-2 sm:p-4 hover:scale-[102%] hover:border hover:border-purple-600 sm:pb-0 transition-all duration-300 '>
       <CardContent className='flex flex-col sm:flex-row items-center justify-between gap-6'>
         <div className='w-full sm:w-28'>
           <Link
